@@ -1,0 +1,12 @@
+requests
+beautifulsoup4
+tldextract
+pypandoc
+html2text
+boto3
+python-dotenv
+celery
+redis
+fastapi
+uvicorn[standard]
+eventlet

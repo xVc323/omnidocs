@@ -1,0 +1,16 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile.frontend"
+
+[deploy]
+startCommand = "node server.js"
+healthcheckPath = "/"
+healthcheckTimeout = 10
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 5
+numReplicas = 1
+
+[env]
+PORT = "3000"
+# You'll need to update this in the Railway dashboard with the actual backend URL
+NEXT_PUBLIC_API_URL = "https://omnidocs-backend-production.up.railway.app"

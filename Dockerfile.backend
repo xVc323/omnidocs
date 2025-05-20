@@ -1,0 +1,29 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Install system dependencies for Pandoc and Supervisor
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    pandoc \
+    supervisor \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application code
+COPY *.py ./
+COPY src ./src/
+
+# Create output directory
+RUN mkdir -p outputs
+
+# Expose API port
+EXPOSE 8000
+
+# Start the API service with a shell script to handle environment variables
+COPY railway/start.sh ./start.sh
+RUN chmod +x ./start.sh
+CMD ["./start.sh"] 

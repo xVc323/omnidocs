@@ -1,0 +1,19 @@
+# Build files
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Generated output
+outputs/
+
+# API routes excluded from linting
+frontend/src/app/api/
