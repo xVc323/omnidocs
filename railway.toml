@@ -1,16 +1,16 @@
 [build]
 builder = "DOCKERFILE"
-dockerfilePath = "Dockerfile.backend"
+dockerfilePath = "Dockerfile.frontend"
 
 [deploy]
-startCommand = "./start.sh"
+startCommand = "node server.js"
 healthcheckPath = "/"
 healthcheckTimeout = 10
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 5
-
-# Ensure shared volume for Redis (optional if using Railway Redis plugin)
 numReplicas = 1
 
 [env]
-PORT = "8000" 
+PORT = "3000"
+# You'll need to update this in the Railway dashboard with the actual backend URL
+NEXT_PUBLIC_API_URL = "https://omnidocs-backend-production.up.railway.app"
