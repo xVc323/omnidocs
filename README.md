@@ -1,11 +1,12 @@
 # OmniDocs
 
-A powerful tool for automated documentation site crawling and Markdown conversion. OmniDocs intelligently crawls documentation websites and exports them as well-formatted Markdown files.
+A powerful tool for automated documentation site crawling and Markdown conversion. **OmniDocs generates LLM-friendly Markdown files**—perfect for AI ingestion, semantic search, and knowledge base building. OmniDocs intelligently crawls documentation websites and exports them as well-formatted, structured Markdown files ready for use with large language models.
 
 ## 🌟 Features
 
 - **Smart Crawling**: Automatically identifies and targets only documentation pages
 - **Structured Conversion**: Preserves document hierarchy and navigation order
+- **LLM-Optimized Output**: Produces clean, consistent Markdown ideal for AI/ML pipelines, RAG, and vector databases
 - **Flexible Output**: Choose between single consolidated Markdown file or multi-file ZIP archive
 - **High-Fidelity Markdown**: Accurately converts tables, code blocks, lists, and more
 - **User-Friendly Interface**: Simple form with advanced options for customization
