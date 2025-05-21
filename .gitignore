@@ -48,3 +48,6 @@ NOTES.md
 .idea/
 *.sublime-project
 *.sublime-workspace
+
+# Cursor AI project files
+.cursor/
